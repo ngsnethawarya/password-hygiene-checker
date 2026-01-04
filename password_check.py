@@ -21,5 +21,9 @@ def check_password(password):
         print("Password looks strong.")
 
 if __name__ == "__main__":
-    user_password = input("Enter a password to check: ")
-    check_password(user_password)
+    user_password = input("Enter a password to check: ").strip()
+
+    if not user_password:
+        print("No password entered. Please try again.")
+    else:
+        check_password(user_password)
